@@ -1,26 +1,31 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+
 
 public class ScoreTest {
     @Test
     void init_valore_null() {
         Score score = Score.from("ciccio");
 
-        assertThat(score).isNull();
+       assertNull(score);
+
     }
     @Test
     void init_valore_0() {
         Score score = Score.from("0");
 
-        assertThat(score).isEqualTo(Score.ZERO);
+        assertEquals(Score.ZERO,score);
     }
 
     @Test
     void init_valore_LOVE() {
         Score score = Score.from("LOVE");
 
-        assertThat(score).isEqualTo(Score.LOVE);
+        assertEquals(Score.LOVE,score);
+
     }
 
 }

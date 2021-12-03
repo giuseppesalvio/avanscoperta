@@ -1,13 +1,13 @@
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PlayerTest {
     @Test
     void creo_un_player_che_inizia_con_score_a_0() {
         Player player = new Player();
 
-        assertThat(player.getScore()).isEqualTo(Score.ZERO);
+       assertEquals(Score.ZERO,player.getScore());
     }
 
     @Test
@@ -15,8 +15,6 @@ public class PlayerTest {
         Player player = new Player();
         player.setScrore(Score.LOVE);
 
-        assertThat(player.getScore()).isEqualTo(Score.LOVE);
+        assertEquals(Score.LOVE,player.getScore());
     }
-
-
 }
