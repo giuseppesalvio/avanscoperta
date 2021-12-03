@@ -11,7 +11,7 @@ public class PlayerTest {
     }
 
     @Test
-    void create_a_player_that_start_with_score_to_LOVE() {
+    void create_a_player_update_score_to_LOVE() {
         Player player = new Player();
         player.setScrore(Score.LOVE);
 
