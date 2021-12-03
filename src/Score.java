@@ -1,6 +1,11 @@
+import java.util.Objects;
+
 public enum Score {
     ZERO("0"),
-    LOVE("LOVE");
+    LOVE("LOVE"),
+    QUINDICI("15"),
+    TRENTA("30"),
+    QUARANTA("40");
 
     private final String valore;
 
@@ -9,11 +14,20 @@ public enum Score {
     }
 
     public static Score from(String valore) {
-        if(valore==ZERO.valore){
+        if (Objects.equals(valore, ZERO.valore)) {
             return ZERO;
         }
-        if(valore==LOVE.valore){
+        if (Objects.equals(valore, LOVE.valore)) {
             return LOVE;
+        }
+        if (Objects.equals(valore, QUINDICI.valore)) {
+            return QUINDICI;
+        }
+        if (Objects.equals(valore, TRENTA.valore)) {
+            return TRENTA;
+        }
+        if (Objects.equals(valore, QUARANTA.valore)) {
+            return QUARANTA;
         }
         return null;
     }
