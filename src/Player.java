@@ -1,11 +1,11 @@
 public class Player {
-    private String score="0";
+    private Score score=Score.ZERO;
 
-    public String getScore() {
+    public Score getScore() {
         return score;
     }
 
-    public void setScrore(String score) {
+    public void setScrore(Score score) {
         this.score = score;
     }
 }
