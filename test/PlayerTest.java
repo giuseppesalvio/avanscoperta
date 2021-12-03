@@ -4,14 +4,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class PlayerTest {
     @Test
-    void init_player_ha_uno_score_a_0() {
+    void creo_un_player_che_inizia_con_score_a_0() {
         Player player = new Player();
 
         assertThat(player.getScore()).isEqualTo(Score.ZERO);
     }
 
     @Test
-    void modifica_lo_score_di_player_con_LOVE() {
+    void creo_un_player_e_modifico_lo_score_in_LOVE() {
         Player player = new Player();
         player.setScrore(Score.LOVE);
 
