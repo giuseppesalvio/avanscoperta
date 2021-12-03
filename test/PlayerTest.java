@@ -7,7 +7,7 @@ public class PlayerTest {
     void creo_un_player_che_inizia_con_score_a_0() {
         Player player = new Player();
 
-       assertEquals(Score.ZERO,player.getScore());
+        assertEquals(Score.ZERO, player.getScore());
     }
 
     @Test
@@ -15,6 +15,6 @@ public class PlayerTest {
         Player player = new Player();
         player.setScrore(Score.LOVE);
 
-        assertEquals(Score.LOVE,player.getScore());
+        assertEquals(Score.LOVE, player.getScore());
     }
 }
