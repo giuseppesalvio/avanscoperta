@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public class Tamagotchi {
 
+    public static final int MAX_STAT = 100;
     private int hungriness;
     private int fullness;
 
@@ -14,8 +15,8 @@ public class Tamagotchi {
 
     protected void feed(int foodQuantity) {
         this.fullness = this.fullness + foodQuantity;
-        if (this.fullness > 100) {
-            this.fullness = 100;
+        if (this.fullness > MAX_STAT) {
+            this.fullness = MAX_STAT;
         }
         this.hungriness = this.hungriness - foodQuantity;
     }

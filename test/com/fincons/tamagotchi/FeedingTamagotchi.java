@@ -2,6 +2,7 @@ package com.fincons.tamagotchi;
 
 import org.junit.jupiter.api.Test;
 
+import static com.fincons.tamagotchi.Tamagotchi.MAX_STAT;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FeedingTamagotchi {
@@ -33,6 +34,6 @@ public class FeedingTamagotchi {
 
         tamagotchi.feed(5);
 
-        assertEquals(100, tamagotchi.getFullness());
+        assertEquals(MAX_STAT, tamagotchi.getFullness());
     }
 }
