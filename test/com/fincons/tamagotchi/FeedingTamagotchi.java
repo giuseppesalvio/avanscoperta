@@ -28,12 +28,25 @@ public class FeedingTamagotchi {
     }
 
     @Test
-    void when_feeding_tamagotchi_that_is_alreay_full_then_fullness_not_change() {
+    void when_feeding_tamagotchi_over_max_fullness_then_fullness_stay_at_max_value() {
 
         Tamagotchi tamagotchi = new Tamagotchi(50,99);
 
         tamagotchi.feed(5);
 
         assertEquals(MAX_STAT, tamagotchi.getFullness());
+        assertEquals(45, tamagotchi.getHungriness());
     }
+
+    @Test
+    void when_feeding_tamagotchi_belove_min_hungriness_then_hungriness_stay_at_min_value() {
+
+        Tamagotchi tamagotchi = new Tamagotchi(4,50);
+
+        tamagotchi.feed(5);
+
+        assertEquals(55, tamagotchi.getFullness());
+        assertEquals(1, tamagotchi.getHungriness());
+    }
+
 }

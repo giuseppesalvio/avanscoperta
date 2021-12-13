@@ -2,9 +2,13 @@ package com.fincons.tamagotchi;
 
 import java.util.Objects;
 
+import static java.lang.Math.max;
+import static java.lang.Math.min;
+
 public class Tamagotchi {
 
     public static final int MAX_STAT = 100;
+    public static final int MIN_STAT = 1;
     private int hungriness;
     private int fullness;
 
@@ -14,11 +18,16 @@ public class Tamagotchi {
     }
 
     protected void feed(int foodQuantity) {
-        this.fullness = this.fullness + foodQuantity;
-        if (this.fullness > MAX_STAT) {
-            this.fullness = MAX_STAT;
-        }
-        this.hungriness = this.hungriness - foodQuantity;
+        this.fullness = min(fullnessIncrement(foodQuantity), MAX_STAT);
+        this.hungriness = max(hungrinessDecrease(foodQuantity), MIN_STAT);
+    }
+
+    private int hungrinessDecrease(int foodQuantity) {
+        return this.hungriness - foodQuantity;
+    }
+
+    private int fullnessIncrement(int foodQuantity) {
+        return this.fullness + foodQuantity;
     }
 
     int getFullness() {
