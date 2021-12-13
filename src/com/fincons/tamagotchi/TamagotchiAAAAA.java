@@ -5,14 +5,14 @@ import java.util.Objects;
 import static java.lang.Math.max;
 import static java.lang.Math.min;
 
-public class Tamagotchi {
+public class TamagotchiAAAAA {
 
     public static final int MAX_STAT = 100;
     public static final int MIN_STAT = 1;
     private int hungriness;
     private int fullness;
 
-    public Tamagotchi(int hungriness, int fullness) {
+    public TamagotchiAAAAA(int hungriness, int fullness) {
         this.hungriness = hungriness;
         this.fullness = fullness;
     }
@@ -42,7 +42,7 @@ public class Tamagotchi {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Tamagotchi that = (Tamagotchi) o;
+        TamagotchiAAAAA that = (TamagotchiAAAAA) o;
         return hungriness == that.hungriness && fullness == that.fullness;
     }
 
