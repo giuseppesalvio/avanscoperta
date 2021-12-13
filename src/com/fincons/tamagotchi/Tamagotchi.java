@@ -13,11 +13,11 @@ public class Tamagotchi {
     }
 
     protected void feed(int foodQuantity) {
-        this.fullness = this.fullness + 5;
+        this.fullness = this.fullness + foodQuantity;
         if (this.fullness > 100) {
             this.fullness = 100;
         }
-        this.hungriness = this.hungriness - 5;
+        this.hungriness = this.hungriness - foodQuantity;
     }
 
     int getFullness() {

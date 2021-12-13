@@ -21,9 +21,9 @@ public class FeedingTamagotchi {
 
         Tamagotchi tamagotchi = new Tamagotchi(50,50);
 
-        tamagotchi.feed(5);
+        tamagotchi.feed(10);
 
-        assertEquals(55, tamagotchi.getFullness());
+        assertEquals(60, tamagotchi.getFullness());
     }
 
     @Test
